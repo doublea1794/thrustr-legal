@@ -11,9 +11,9 @@
 <main>
 <p class="eyebrow"><a href="index.html">Thrustr</a></p>
 <h1>Privacy Policy</h1>
-<p class="meta">Effective October 9, 2026</p>
+<p class="meta">Effective October 10, 2026</p>
 
-<p class="lead">Thrustr is a training log for CrossFit and strength athletes. The short version: your workouts stay on your phone, we don't sell your data, and we don't track you across other apps or websites.</p>
+<p class="lead">Thrustr is a training log for CrossFit and strength athletes. The short version: your workouts stay on your phone, we don't sell your data, and we don't track you across other apps or websites. If you connect a gym that posts its workouts on Thrustr, that gym can see your name.</p>
 
 <p>This policy explains what information the Thrustr app ("Thrustr", "we", "us") handles, why, and the choices you have. Thrustr is made by Austin Arnold, an individual developer based in Washington, USA.</p>
 
@@ -22,7 +22,7 @@
 <ul>
 <li>Workouts, sets, reps, weights, times and scores</li>
 <li>Your 1RMs and their history</li>
-<li>Your name, gym, class schedule, weekly goal and settings</li>
+<li>Your name, gym, class schedule, weekly goal and settings (if you connect a gym on Thrustr, your name is shared with that gym, see section 3)</li>
 <li>Skills and injuries you choose to note in your profile</li>
 <li>Files you import from other apps (SugarWOD, Wodify, BTWB)</li>
 </ul>
@@ -33,13 +33,25 @@
 
 <h2>3. Finding your gym</h2>
 <p>When you search for your gym, the search text and your approximate map area are sent to Apple Maps to find matching places. Apple's privacy policy covers that search. Your search text is also checked against the list of gyms that post their workouts on Thrustr. Thrustr only saves the gym you pick, on your phone.</p>
-<p>If your gym posts its workouts on Thrustr, the app asks our server for that gym's workouts when you open it. The request contains only the gym's ID and the dates. It doesn't include your name, your results or anything that identifies you, and the gym can't see who has connected.</p>
+<p>If your gym posts its workouts on Thrustr, the app asks our server for that gym's workouts when you open it. That request contains only the gym's ID and the dates.</p>
+<h3>What your gym sees when you connect</h3>
+<p>When you connect a gym on Thrustr, the app sends our server the name you entered in Thrustr, a random ID made for your copy of the app (not linked to your phone, Apple ID or anything else), and the gym's code if you connected with it. It sends this again each time you open the app, so the gym can see:</p>
+<ul>
+<li>Your name, as you entered it in Thrustr</li>
+<li>When you connected, and when you last opened the app</li>
+<li>Whether you used the gym's code or found the gym in search (people who found it in search are listed as waiting until the gym approves them)</li>
+</ul>
+<p>Your workouts, results, maxes, profile and anything else you log are never sent and the gym can't see them. When you disconnect the gym (or switch gyms), the app removes you from that gym's list. The gym can also remove you. Gyms that aren't on Thrustr (found in Apple Maps or added by you) receive nothing.</p>
+<h3>Preventing abuse</h3>
+<p>To stop people from listing every gym, guessing gym codes or adding fake members, our server briefly uses the network (IP) address a request comes from to count how often it searches, looks up codes or joins gyms. We keep only the address and a count, and delete them within a day.</p>
 
 <h2>4. Notifications</h2>
 <p>Reminders (like "log your results" after class or "rest is over") are scheduled on your phone. No notification content is sent to us.</p>
 
 <h2>5. Accounts</h2>
 <p>Gym owners and coaches who post workouts sign in to the Thrustr gym portal with an email and password. We store that email, the gym's name and city, and the workouts they post, with our service provider Supabase, so the gym can manage them and members can see them. Gym owners can ask us to delete their account and gym at any time.</p>
+<p><strong>Member lists.</strong> A gym owner can add their gym's member list (names and, optionally, email addresses) to the portal to see which members haven't connected yet. We store it with Supabase only so that gym can see it, and we never contact the people on it. The gym decides whether to invite them, using its own email. If you're on a gym's list and want to be removed, ask your gym or email us.</p>
+<p><strong>AI coach drafts.</strong> If a gym uses "Draft with AI" in the portal, the gym's profile (class length, equipment, style and similar notes), its recent posted workouts and the coach's request are sent to Anthropic, which runs the AI model that writes the draft. No athlete information is sent.</p>
 <p>The app itself doesn't have accounts today, so athletes never sign in and we don't collect any account details. We plan to add optional accounts later for backup and sync. When we do, we'll collect only what's needed to sign you in, depending on the method you choose:</p>
 <ul>
 <li>Email address (email sign-in)</li>
@@ -62,7 +74,8 @@
 <h2>8. Service providers</h2>
 <p>We share information only with providers that help run Thrustr, and only what they need:</p>
 <ul>
-<li><strong>Supabase</strong>: account sign-in and subscription records, once accounts are available</li>
+<li><strong>Supabase</strong>: our database. Gym portal accounts, posted workouts, gym member lists, the names of athletes who connected a gym, and (once accounts are available) athlete sign-in and subscription records</li>
+<li><strong>Anthropic</strong>: writes AI workout drafts for gyms that use them in the portal</li>
 <li><strong>Stripe</strong>: payment processing, if a paid plan is offered</li>
 <li><strong>Apple</strong>: App Store, Sign in with Apple, Maps search and notifications</li>
 <li><strong>Google</strong>: only if you choose Sign in with Google</li>
@@ -70,7 +83,7 @@
 <p>We may also disclose information if required by law, or to protect the rights and safety of our users or others.</p>
 
 <h2>9. Keeping and deleting your data</h2>
-<p>You can erase everything Thrustr has saved on your phone at any time in the app under Settings &gt; Erase all data, or by deleting the app. Once accounts are available, we'll keep account and subscription records only while your account exists, and you'll be able to delete your account in the app. Records we must keep for legal, tax or fraud-prevention reasons (such as payment records held by Stripe) are kept only as long as required.</p>
+<p>You can erase everything Thrustr has saved on your phone at any time in the app under Settings &gt; Erase all data, or by deleting the app. To be removed from a gym's member list, disconnect the gym in the app before deleting it, or email us. Once accounts are available, we'll keep account and subscription records only while your account exists, and you'll be able to delete your account in the app. Records we must keep for legal, tax or fraud-prevention reasons (such as payment records held by Stripe) are kept only as long as required.</p>
 
 <h2>10. Your rights</h2>
 <p>Depending on where you live (for example, California or the European Union), you may have the right to access, correct, delete or get a copy of your personal information, and to object to how it's used. Most of your data is on your phone and under your control already. For anything we hold, email us at the address below and we'll respond within 30 days. We won't treat you differently for using these rights.</p>

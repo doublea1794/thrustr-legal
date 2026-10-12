@@ -11,7 +11,7 @@
 <main>
 <p class="eyebrow"><a href="index.html">Thrustr</a></p>
 <h1>Privacy Policy</h1>
-<p class="meta">Effective October 10, 2026</p>
+<p class="meta">Effective October 12, 2026</p>
 
 <p class="lead">Thrustr is a training log for CrossFit and strength athletes. The short version: your workouts stay on your phone, we don't sell your data, and we don't track you across other apps or websites. If you connect a gym that posts its workouts on Thrustr, that gym can see your name.</p>
 
@@ -30,7 +30,7 @@
 
 <h2>2. Camera and photos</h2>
 <p>Thrustr asks for camera access to scan your gym's QR code and to read workouts from a whiteboard. If you pick a screenshot or photo, Thrustr reads the text in it. All of this happens on your phone using Apple's built-in text recognition. Photos and camera images are not uploaded or saved by Thrustr.</p>
-<p>In coach mode (see section 5), when a coach adds the day's workout from a screenshot, the text is read on the phone the same way, and only that text is sent to our server to be tidied into a workout. The screenshot itself never leaves the phone.</p>
+<p>In the gym owner view (see section 5), when a gym owner adds the day's workout from a screenshot, the text is read on the phone the same way, and only that text is sent to our server to be tidied into a workout. The screenshot itself never leaves the phone.</p>
 
 <h2>3. Finding your gym</h2>
 <p>When you search for your gym, the search text and your approximate map area are sent to Apple Maps to find matching places. Apple's privacy policy covers that search. Your search text is also checked against the list of gyms that post their workouts on Thrustr. Thrustr only saves the gym you pick, on your phone.</p>
@@ -51,10 +51,11 @@
 
 <h2>5. Accounts</h2>
 <p>Gym owners who post workouts sign in to the Thrustr gym portal with an email and password. We store that email, the gym's name and city, and the workouts they post, with our service provider Supabase, so the gym can manage them and members can see them. Gym owners can ask us to delete their account and gym at any time.</p>
+<p><strong>Gym owner view in the app.</strong> A gym owner can also sign in to the app's gym owner view with the same email and password. The app sends them to Supabase to sign in and keeps only a sign-in token in the phone's Keychain, never the password. The sign-in only reaches that owner's own gyms. Signing out, or Settings &gt; Erase all data, removes it from the phone.</p>
 <p><strong>Member lists.</strong> A gym owner can add their gym's member list (names and, optionally, email addresses) to the portal to see which members haven't connected yet. We store it with Supabase only so that gym can see it, and we never contact the people on it. The gym decides whether to invite them, using its own email. If you're on a gym's list and want to be removed, ask your gym or email us.</p>
-<p><strong>Coaches.</strong> A gym owner can invite coaches from the portal by entering a coach's name. The coach opens the invite link on their phone, and Thrustr turns on coach mode for that gym without an account or password: our server gives that phone a random key, which is kept in the phone's Keychain. We store the coach's name, when they joined and last opened coach mode, a scrambled (hashed) copy of the key, the gym's class schedule with the coach for each class, workouts the coach adds, and class preps. The key only lets the coach see the day's workout and the gym's classes, add the day's workout, and prep their class. It doesn't give access to members, member lists or gym settings, and it never shares the coach's own workouts or results. When the owner removes a coach, or the coach leaves coach mode, the key stops working.</p>
+<p><strong>Coaches.</strong> A gym owner can invite coaches from the portal by entering a coach's name. The coach opens the invite link on their phone, and Thrustr turns on coach mode for that gym without an account or password: our server gives that phone a random key, which is kept in the phone's Keychain. We store the coach's name, when they joined and last opened coach mode, a scrambled (hashed) copy of the key, the gym's class schedule with the coach for each class, and class preps, including changes coaches save to them. The key only lets the coach see the day's workout and the gym's classes, and prep their class (make, edit, save or clear the class prep). It doesn't give access to members, member lists or gym settings, and it never shares the coach's own workouts or results. When the owner removes a coach, or the coach leaves coach mode, the key stops working.</p>
 <p><strong>AI coach drafts.</strong> If a gym uses "Draft with AI" in the portal, the gym's profile (class length, equipment, style and similar notes), its recent posted workouts and the coach's request are sent to Anthropic, which runs the AI model that writes the draft. No athlete information is sent.</p>
-<p><strong>Class prep.</strong> When a workout is posted, or an owner or coach taps "Prep my class", the workout, the class length, the gym's level names and its profile notes (equipment and things to avoid) are sent to Anthropic to write a short class plan: each part of the workout with a rough time and the weights for each level. When a coach adds a workout copied from another app, the copied text is sent to Anthropic to tidy it up. No athlete information is sent. The weights for each level are shown to the gym's members in the app.</p>
+<p><strong>Class prep.</strong> When a workout is posted, or an owner or coach taps "Prep my class", the workout, the class length, the gym's level names and its profile notes (equipment and things to avoid) are sent to Anthropic to write a short class plan: each part of the workout with a rough time and the weights for each level. When a gym owner adds a workout copied from another app, the copied text is sent to Anthropic to tidy it up. No athlete information is sent. Owners and coaches can edit a class prep by hand or clear it; edits aren't sent to Anthropic. The saved version's weights for each level are shown to the gym's members in the app.</p>
 <p>The app itself doesn't have accounts today, so athletes never sign in and we don't collect any account details. We plan to add optional accounts later for backup and sync. When we do, we'll collect only what's needed to sign you in, depending on the method you choose:</p>
 <ul>
 <li>Email address (email sign-in)</li>
@@ -77,10 +78,10 @@
 <h2>8. Service providers</h2>
 <p>We share information only with providers that help run Thrustr, and only what they need:</p>
 <ul>
-<li><strong>Supabase</strong>: our database. Gym portal accounts, posted workouts, gym member lists, the names of athletes who connected a gym, coach names, class schedules (times, class types and coaches), level names and class preps, and (once accounts are available) athlete sign-in and subscription records</li>
+<li><strong>Supabase</strong>: our database. Gym portal accounts, posted workouts, gym member lists, the names of athletes who connected a gym, coach names, class schedules (times, class types and coaches), level names and class preps, gym owner sign-ins from the portal and the app, and (once accounts are available) athlete sign-in and subscription records</li>
 <li><strong>Anthropic</strong>: writes AI workout drafts and class preps, and tidies workouts coaches copy in, for gyms that use these features</li>
 <li><strong>Stripe</strong>: payment processing, if a paid plan is offered</li>
-<li><strong>Apple</strong>: App Store, Sign in with Apple, Maps search, notifications and the Keychain that keeps a coach's key on their phone</li>
+<li><strong>Apple</strong>: App Store, Sign in with Apple, Maps search, notifications and the Keychain that keeps a coach's key or a gym owner's sign-in on their phone</li>
 <li><strong>Google</strong>: only if you choose Sign in with Google</li>
 </ul>
 <p>We may also disclose information if required by law, or to protect the rights and safety of our users or others.</p>

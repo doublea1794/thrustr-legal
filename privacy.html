@@ -29,7 +29,8 @@
 <p>If you delete the app, this data is deleted with it. Your phone may include it in your own iCloud or computer backups, which Apple's policies cover.</p>
 
 <h2>2. Camera and photos</h2>
-<p>Thrustr asks for camera access to scan your gym's QR code and to read workouts from a whiteboard. If you pick a screenshot or photo, Thrustr reads the text in it. All of this happens on your phone using Apple's built-in text recognition. Photos and camera images are not uploaded or saved by Thrustr.</p>
+<p>Thrustr asks for camera access to scan your gym's QR code and to read workouts from a whiteboard. If you pick a screenshot or take a photo of a workout, Thrustr first reads the text in it on your phone using Apple's built-in text recognition.</p>
+<p><strong>AI reading for signed-in athletes.</strong> If you're signed in (see section 5), the photo or screenshot of the workout, resized and with the text your phone read, is also sent through our server to Anthropic, whose AI model reads the workout from it and sends it back as text. This makes handwriting and whiteboards much easier to read. The image is used only for that one read: Thrustr doesn't save it, and it isn't linked to your workouts. We keep a short record that a read happened (your account, the time and whether a workout was found) so each athlete gets a fair daily limit. If you're not signed in, or the AI can't be reached, everything happens on your phone and the image never leaves it. QR code scans always stay on your phone.</p>
 <p>In the gym owner view (see section 5), when a gym owner adds the day's workout from a screenshot, the text is read on the phone the same way, and only that text is sent to our server to be tidied into a workout. The screenshot itself never leaves the phone.</p>
 
 <h2>3. Finding your gym</h2>
@@ -84,8 +85,8 @@
 <h2>8. Service providers</h2>
 <p>We share information only with providers that help run Thrustr, and only what they need:</p>
 <ul>
-<li><strong>Supabase</strong>: our database and sign-in provider, which also sends sign-in emails. Gym portal accounts, posted workouts, gym member lists, the names of athletes who connected a gym, athlete accounts (email, account identifier, name and gym memberships), push tokens, staff names, roles and sign-ins, class schedules (times, class types and coaches), level names, class preps, each gym's activity log, gym owner sign-ins from the portal and the app, and subscription records</li>
-<li><strong>Anthropic</strong>: writes AI workout drafts and class preps, and tidies workouts gym owners copy in (in the app or on the portal), for gyms that use these features</li>
+<li><strong>Supabase</strong>: our database and sign-in provider, which also sends sign-in emails. Gym portal accounts, posted workouts, gym member lists, the names of athletes who connected a gym, athlete accounts (email, account identifier, name and gym memberships), push tokens, staff names, roles and sign-ins, class schedules (times, class types and coaches), level names, class preps, each gym's activity log, gym owner sign-ins from the portal and the app, a record of each AI workout read (account, time and whether a workout was found, never the image), and subscription records</li>
+<li><strong>Anthropic</strong>: writes AI workout drafts and class preps, tidies workouts gym owners copy in (in the app or on the portal), and reads workouts from the whiteboard photos and screenshots signed-in athletes scan</li>
 <li><strong>Stripe</strong>: payment processing, if a paid plan is offered</li>
 <li><strong>Apple</strong>: App Store, Sign in with Apple, Maps search, push notifications (Apple Push Notification service delivers them to your phone) and the Keychain that keeps your sign-in, a coach's key or a gym owner's sign-in on their phone</li>
 <li><strong>Vercel</strong>: hosts the gym portal and members' gym pages on the web</li>

@@ -11,7 +11,7 @@
 <main>
 <p class="eyebrow"><a href="index.html">Thrustr</a></p>
 <h1>Privacy Policy</h1>
-<p class="meta">Effective October 12, 2026</p>
+<p class="meta">Effective October 13, 2026</p>
 
 <p class="lead">Thrustr is a training log for CrossFit and strength athletes. The short version: your workouts stay on your phone, we don't sell your data, and we don't track you across other apps or websites. If you connect a gym that posts its workouts on Thrustr, that gym can see your name, and if you sign in, your email.</p>
 
@@ -73,10 +73,12 @@
 <p><strong>Member profiles.</strong> Your gym's owner and front desk staff can see a profile for each member: your name, when you joined and last opened the app, your email address (if you signed in or the gym added it to its member list), your attendance, bookings, waiver status, recent gym workout results, and notes and a plan description the gym's staff write about you. Coaches see the same without your email. If you choose to share your injuries or limitations with your gym (in the app under Skills and injuries, or on the member page), its staff see that text until you stop sharing.</p>
 <p><strong>Messages from your gym.</strong> Your gym's owner and front desk staff can send email and notifications to groups of members (for example everyone, new members, members who haven't signed the waiver, or members who haven't been in recently). Emails come from your gym "via Thrustr", replies go to the staff member who sent it, and every email has an unsubscribe link. You can also turn your gym's emails on or off on its member page. We keep a copy of each message the gym sends (subject, text, who it was for and how many it reached). Your gym can turn off the automatic notification that tells you when you move up from a waitlist.</p>
 <p><strong>Activity log.</strong> For each gym, our server records who changed what in the portal and the app (for example "posted a workout", "approved a member", "invited front desk staff"), with the time, the person's role and a short label such as a member's name or a workout's date. Only the gym's owner can see it. It doesn't record what was written, only which fields changed.</p>
-<p>We use account data only to sign you in, to link you to your gym, to book classes and check you in, to send notifications you allowed, and to connect your account to a subscription if you buy one.</p>
+<p>We use account data only to sign you in, to link you to your gym, to book classes and check you in, to record what you buy from your gym, to send notifications you allowed, and to connect your account to a subscription if you buy one.</p>
 
 <h2>6. Payments</h2>
-<p>Thrustr doesn't sell anything today. If we offer a paid plan in the future, payments are processed by Stripe. Your card details go directly to Stripe and are never seen or stored by Thrustr. We receive your subscription status (for example, active or canceled), the plan, and renewal dates so the app can unlock paid features.</p>
+<p><strong>Paying your gym.</strong> If your gym takes payments through Thrustr, you can buy its memberships, class packs and drop-ins in the app or on its member page. You pay on Stripe's secure page, and the money goes to your gym's own Stripe account: your gym is the seller. Your card details go directly to Stripe and are never seen or stored by Thrustr. To set you up as a customer on your gym's Stripe account, we send Stripe your name and email. We store a record of what you buy with your account: the plan, its price, its status (for example active, cancelling or ended), renewal and end dates, the reason you gave if you cancel (optional), and each payment's amount, date, status and receipt link. Your gym's owner and front desk staff can see these records, and your gym also sees your payments in its own Stripe account. Thrustr receives a small fee from each payment, paid by your gym. Because payment records are financial records your gym and Stripe have to keep, deleting your Thrustr account doesn't delete them: they stay with your gym, no longer linked to your account.</p>
+<p><strong>Gyms getting paid.</strong> A gym owner who sets up payments creates their own Stripe account on Stripe's sign-up pages, and Stripe collects the business, identity and bank details it needs; Thrustr doesn't see them. We store the gym's Stripe account ID and whether it can take payments and receive payouts, plus the gym's plans and its cancel rules.</p>
+<p><strong>Thrustr paid plans.</strong> Thrustr doesn't sell a plan of its own today. If we offer one in the future, payments are processed by Stripe the same way, and we receive your subscription status (for example, active or canceled), the plan, and renewal dates so the app can unlock paid features.</p>
 
 <h2>7. What we don't do</h2>
 <ul>
@@ -89,9 +91,9 @@
 <h2>8. Service providers</h2>
 <p>We share information only with providers that help run Thrustr, and only what they need:</p>
 <ul>
-<li><strong>Supabase</strong>: our database and sign-in provider, which also sends sign-in emails. Gym portal accounts, posted workouts, gym member lists, the names of athletes who connected a gym, athlete accounts (email, account identifier, name and gym memberships), push tokens, staff names, roles and sign-ins, class schedules (times, class types and coaches), level names, class preps, each gym's activity log, gym owner sign-ins from the portal and the app, a record of each AI workout read (account, time and whether a workout was found, never the image), and subscription records</li>
+<li><strong>Supabase</strong>: our database and sign-in provider, which also sends sign-in emails. Gym portal accounts, posted workouts, gym member lists, the names of athletes who connected a gym, athlete accounts (email, account identifier, name and gym memberships), push tokens, staff names, roles and sign-ins, class schedules (times, class types and coaches), level names, class preps, each gym's activity log, gym owner sign-ins from the portal and the app, a record of each AI workout read (account, time and whether a workout was found, never the image), gyms' plans, members' purchase and payment records, and subscription records</li>
 <li><strong>Anthropic</strong>: writes AI workout drafts and class preps, tidies workouts gym owners copy in (in the app or on the portal), and reads workouts from the whiteboard photos and screenshots signed-in athletes scan</li>
-<li><strong>Stripe</strong>: payment processing, if a paid plan is offered</li>
+<li><strong>Stripe</strong>: processes payments to gyms (your name, your email and what you buy go to your gym's Stripe account) and gym owners' Stripe sign-up, and would process a Thrustr paid plan if one is offered</li>
 <li><strong>Apple</strong>: App Store, Sign in with Apple, Maps search, push notifications (Apple Push Notification service delivers them to your phone) and the Keychain that keeps your sign-in, a coach's key or a gym owner's sign-in on their phone</li>
 <li><strong>Vercel</strong>: hosts the gym portal and members' gym pages on the web</li>
 <li><strong>Resend</strong>: delivers emails gyms send to their members (your email address, the gym's name and the message)</li>
@@ -111,7 +113,7 @@
 <p>Thrustr isn't directed at children under 13 (or under 16 in the European Union), and we don't knowingly collect their personal information. If you believe a child has given us information, contact us and we'll delete it.</p>
 
 <h2>13. Future features</h2>
-<p>We plan to add features like backup, gym payments and an AI coach. Before any feature sends new kinds of data off your phone, we'll update this policy and the app will tell you what's shared.</p>
+<p>We plan to add features like backup and an AI coach. Before any feature sends new kinds of data off your phone, we'll update this policy and the app will tell you what's shared.</p>
 
 <h2>14. Changes to this policy</h2>
 <p>If we change this policy, we'll update the date at the top. For important changes, we'll let you know in the app.</p>
